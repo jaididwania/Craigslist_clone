@@ -1,8 +1,9 @@
 import requests
-
 from django.shortcuts import render
 from bs4 import BeautifulSoup
-# Create your views here.
+
+BASE_CRAIGSLIST_URL= 'https://jaipur.craigslist.org/search/?query={}'
+
 def home(request):
     return render(request, 'base.html')
 
