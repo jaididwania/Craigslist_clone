@@ -3,59 +3,29 @@
 {% block content %}
 
 <h2 style="text-align: center">{{ search | title }}</h2>
+
 <div class="row">
 
-    <div class="col s4">
-        <div class="card">
+{% for post in final_posting%}
+        <div class="col s4">
+        <div class="card ">
             <div class="card-image">
-                <a href="/"><img src="https://th.bing.com/th/id/OIP.ivHy7rpHL0GyEA_mdcY5AAHaFj?w=272&h=193&c=7&o=5&dpr=1.25&pid=1.7" alt=""> </a>
+                <a href="{{ post.1 }}"><img src="{{ post.3 }}" alt=""> </a>
 
             </div>
 
             <div class="card-content">
-                <p>TEST</p>
+                <p>{{ post.0}}</p>
             </div>
 
             <div class="card-action">
-                <a href="/"> View Listing:Price </a>
+                <a href="{{ post.1}}">Price {{ post.2}}</a>
             </div>
         </div>
     </div>
 
-    <div class="col s4">
-        <div class="card">
-            <div class="card-image">
-                <a href="/"><img src="https://th.bing.com/th/id/OIP.ivHy7rpHL0GyEA_mdcY5AAHaFj?w=272&h=193&c=7&o=5&dpr=1.25&pid=1.7" alt=""> </a>
-            </div>
-
-            <div class="card-content">
-                <p>TEST</p>
-            </div>
-
-            <div class="card-action">
-                <a href="/"> View Listing:Price </a>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="col s4">
-        <div class="card">
-            <div class="card-image">
-                <a href="/"><img src="https://th.bing.com/th/id/OIP.ivHy7rpHL0GyEA_mdcY5AAHaFj?w=272&h=193&c=7&o=5&dpr=1.25&pid=1.7" alt=""> </a>
-            </div>
-
-            <div class="card-content">
-                <p>TEST</p>
-            </div>
-
-            <div class="card-action">
-                <a href="/"> View Listing:Price </a>
-            </div>
-
-        </div>
-    </div>
-
+{% endfor %}
 </div>
+
 
 {% endblock content %}
