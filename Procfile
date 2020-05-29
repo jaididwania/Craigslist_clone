@@ -1,1 +1,1 @@
-web: gunicron clone.wsgi
+web: gunicorn clone.wsgi
