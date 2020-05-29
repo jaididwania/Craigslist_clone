@@ -6,5 +6,6 @@
 
 .card-image {
     height: 200px; /* Your height here */
-    overflow: height;
+    overflow: hidden;
+
 }
